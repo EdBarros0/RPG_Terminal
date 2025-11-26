@@ -56,11 +56,12 @@ public class Personagem implements Pessoa {
     public String danoRecebido(int dano,Habilidade habilidade) {
         if(dano - this.defesa >= 0) {
             this.vida -= (dano - this.defesa);
-            return "Dano recebido: " + (dano - this.defesa);
+            return "O inimigo usou "+ habilidade.getNome() +". Dano recebido: " + (dano - this.defesa);
         } else {
-            return "Sua defesa bloqueou todo o dano!";
+            return "O inimigo usou "+ habilidade.getNome() +", mas sua defesa bloqueou todo o dano!";
         }
     }
+    
 
     
 }
