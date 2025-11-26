@@ -62,6 +62,19 @@ public class Personagem implements Pessoa {
         }
     }
     
+    void adicionarArma(Arma arma) {
+        inventario.add(arma);
+    }
 
+    void listarArmas() {
+        System.out.println("Inventário de Armas:");
+        for (Arma arma : inventario) {
+            System.out.println("- " + arma.getNome() + " (Dano: " + arma.getDano() + ")");
+            System.out.println("  Habilidades:");
+            for (Habilidade hab : arma.getHabilidades()) {
+                System.out.println("    * " + hab.getNome() + " (Multiplicador: " + hab.getMultiplicador() + ")");
+            }
+        }
+    }
     
 }
