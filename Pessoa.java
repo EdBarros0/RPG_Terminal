@@ -7,6 +7,6 @@ public interface Pessoa {
     void setForca(int forca);
     int getDefesa();
     void setDefesa(int defesa);
-    void atacar(Pessoa alvo);
-    void danoRecebido(int dano);
+    int atacar(Pessoa alvo, Arma arma, Habilidade habilidade);
+    String danoRecebido(int dano, Habilidade habilidade);
 }
