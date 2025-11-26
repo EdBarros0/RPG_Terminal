@@ -33,6 +33,10 @@ public class Arma {
         return habilidades;
     }
     public int DanoTotal(Habilidade habilidade) {
+        if(!habilidades.contains(habilidade)) {
+            System.out.println("Habilidade não encontrada nesta arma.");
+            return 0;
+        }
         return getDano() * habilidade.poderEfeito();
     }
 }
