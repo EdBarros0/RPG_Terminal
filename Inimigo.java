@@ -4,12 +4,11 @@ public class Inimigo implements Pessoa {
     int forca;
     int defesa;
     Arma armaEquipada;
-    public Inimigo(String nome, int vida, int forca, int defesa, Arma armaEquipada) {
+    public Inimigo(String nome, int vida, int forca, int defesa) {
         this.nome = nome;
         this.vida = vida;
         this.forca = forca;
         this.defesa = defesa;
-        this.armaEquipada = armaEquipada;
     }
     @Override
     public String getNome() {
@@ -56,6 +55,10 @@ public class Inimigo implements Pessoa {
         } else {
             return "Você usou"+ habilidade.getNome() +", mas a defesa do inimigo é forte demais! Nenhum dano foi causado.";
         }
+    }
+
+    void equiparArma(Arma arma) {
+        this.armaEquipada = arma;
     }
     
 }
