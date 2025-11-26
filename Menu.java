@@ -5,7 +5,7 @@ public class Menu {
         System.out.println("Menu de Opções:");
         System.out.println("1. Batalhar");
         System.out.println("2. Inventario");
-        System.out.println("4. Sair");
+        System.out.println("3. Sair");
     }
 
     public void selecionarOpcao() {
@@ -24,7 +24,7 @@ public class Menu {
             case 2:
                 System.out.println("Abrindo inventário...");
                 break;
-            case 4:
+            case 3:
                 System.out.println("Saindo do jogo...");
                 break;
             default:
